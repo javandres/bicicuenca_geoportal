@@ -14,7 +14,7 @@
   }
 
   .loader-ui-left {
-    background: #3f4854;
+    background: #161c24;
     height: 100vh;
     width: 350px;
     position: relative;
@@ -35,9 +35,9 @@
     padding: 8px 0px;
     border-width: 0px 1px 0px 0px;
     background: rgb(63, 72, 84);
-    border-right: 1px solid #3f4854;
+    border-right: 1px solid #161c24;
     border-radius: 0px 2px 2px 0px;
-    background: #3f4854;
+    background: #161c24;
     z-index: -2;
   }
 }

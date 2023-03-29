@@ -1,11 +1,17 @@
 {
   /* Names of init files (in wwwroot/init), without the .json extension, to load by default */
-  "initializationUrls": ["simple"],
+  "initializationUrls": ["bicicuenca"],
   "parameters": {
     "googleUrlShortenerKey": null,
     "googleAnalyticsKey": null,
     "googleAnalyticsOptions": null,
-
+    "cesiumIonAccessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI3NmY5NTBhYS0xMThhLTQxYzMtOGJlMS0wM2Q3MmU5M2Q2NmUiLCJpZCI6NzQ5MjUsImlhdCI6MTYzODIyNjIyNX0.GEOSoXSAavUDSAZbsA99QELpqRAGcoSc0P0b4cEzt8c",
+    "bingMapsKey": "Av4Zk9OUyBm3K_jHHTEM9yJwp5jJRfsRgfY6uyTag_4su7ABN84-7JjWstvOimA9",
+    "hideTerriaLogo": true,
+    "theme": {
+      "logoHeight": "10px"
+    },
+    "aboutButtonHrefUrl": null,
     // Log ConsoleAnalytics events to console
     // logToConsole: true,
 
@@ -14,6 +20,7 @@
       "text": "Disclaimer: This map must not be used for navigation or precise spatial analysis",
       "url": ""
     },
+    "relatedMaps": [],
     /*
         // Text that will be added to any pages printed from your site.
         printDisclaimer:{
@@ -44,11 +51,7 @@
     "appName": "Terria Map",
 
     // See comments in lib/Views/global.scss for further information about customising colors, logos, fonts etc.
-    "brandBarElements": [
-      "",
-      "<a target=\"_blank\" href=\"https://terria.io\"><img src=\"images/terria_logo.png\" height=\"52\" title=\"Version: {{version}}\" /></a>",
-      ""
-    ],
+    "brandBarElements": [],
     // Shown when things go wrong.
     "supportEmail": "help@example.com",
     // You probably shouldn't change this.
@@ -80,10 +83,10 @@
       "enabled": false,
       "debug": false,
       "languages": {
-        "en": "English",
-        "fr": "Français"
+        "es": "Español",
+        "en": "English"
       },
-      "fallbackLanguage": "en"
+      "fallbackLanguage": "es"
     },
     "helpContent": [
       {

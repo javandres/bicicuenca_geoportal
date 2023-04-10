@@ -15,7 +15,7 @@
           "name": "Estaciones - Temporal",
           "description": "",
           "type": "csv",
-          "url": "https://geoserver.bici.ubica.ec/geoserver/bicicuenca/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=bicicuenca%3Abicicuenca_data_geom_hour&maxFeatures=50000000&outputFormat=csv",
+          "url": "http://geoserver.bici.ubica.ec:9998/geoserver/bicicuenca/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=bicicuenca%3Abicicuenca_data_geom_hour&maxFeatures=50000000&outputFormat=csv",
           "defaultStyle": {
             "time": {
               "timeColumn": "timestamp",
@@ -46,20 +46,20 @@
         {
           "type": "wms",
           "name": "Ciclovías",
-          "url": "https://geoserver.bici.ubica.ec/geoserver/bicicuenca/wms?",
+          "url": "http://geoserver.bici.ubica.ec:9998/geoserver/bicicuenca/wms?",
           "layers": "ciclovias",
           "styles": "ciclovias"
         },
         {
           "type": "wms",
           "name": "Talleres de bicicletas",
-          "url": "https://geoserver.bici.ubica.ec/geoserver/bicicuenca/wms?",
+          "url": "http://geoserver.bici.ubica.ec:9998/geoserver/bicicuenca/wms?",
           "layers": "bici_talleres"
         },
         {
           "type": "wms",
           "name": "Parqueos de bicicletas",
-          "url": "https://geoserver.bici.ubica.ec/geoserver/bicicuenca/wms?",
+          "url": "http://geoserver.bici.ubica.ec:9998/geoserver/bicicuenca/wms?",
           "layers": "bici_parqueos"
         },
         {
@@ -375,49 +375,49 @@
             {
               "type": "wms",
               "name": "Equipamientos urbanos (todos)",
-              "url": "https://geoserver.bici.ubica.ec/geoserver/bicicuenca/wms?",
+              "url": "http://geoserver.bici.ubica.ec:9998/geoserver/bicicuenca/wms?",
               "layers": "equipamientos_urbanos"
             },
             {
               "type": "wms",
               "name": "Administración - Equipamientos urbanos",
-              "url": "https://geoserver.bici.ubica.ec/geoserver/bicicuenca/wms?&CQL_FILTER=layer%3D%27administracion%27",
+              "url": "http://geoserver.bici.ubica.ec:9998/geoserver/bicicuenca/wms?&CQL_FILTER=layer%3D%27administracion%27",
               "layers": "equipamientos_urbanos"
             },
             {
               "type": "wms",
               "name": "Aprovisionamiento - Equipamientos urbanos",
-              "url": "https://geoserver.bici.ubica.ec/geoserver/bicicuenca/wms?&CQL_FILTER=layer%3D%27APROVISIONAMIENTO%27",
+              "url": "http://geoserver.bici.ubica.ec:9998/geoserver/bicicuenca/wms?&CQL_FILTER=layer%3D%27APROVISIONAMIENTO%27",
               "layers": "equipamientos_urbanos"
             },
             {
               "type": "wms",
               "name": "Bienestar Soacial - Equipamientos urbanos",
-              "url": "https://geoserver.bici.ubica.ec/geoserver/bicicuenca/wms?&CQL_FILTER=layer%3D%27BINESTARSOCIAL%27",
+              "url": "http://geoserver.bici.ubica.ec:9998/geoserver/bicicuenca/wms?&CQL_FILTER=layer%3D%27BINESTARSOCIAL%27",
               "layers": "equipamientos_urbanos"
             },
             {
               "type": "wms",
               "name": "Cultura - Equipamientos urbanos",
-              "url": "https://geoserver.bici.ubica.ec/geoserver/bicicuenca/wms?&CQL_FILTER=layer%3D%27CULTURA%27",
+              "url": "http://geoserver.bici.ubica.ec:9998/geoserver/bicicuenca/wms?&CQL_FILTER=layer%3D%27CULTURA%27",
               "layers": "equipamientos_urbanos"
             },
             {
               "type": "wms",
               "name": "Educación - Equipamientos urbanos",
-              "url": "https://geoserver.bici.ubica.ec/geoserver/bicicuenca/wms?&CQL_FILTER=layer%3D%27EDUCACION%27",
+              "url": "http://geoserver.bici.ubica.ec:9998/geoserver/bicicuenca/wms?&CQL_FILTER=layer%3D%27EDUCACION%27",
               "layers": "equipamientos_urbanos"
             },
             {
               "type": "wms",
               "name": "Recreación - Equipamientos urbanos",
-              "url": "https://geoserver.bici.ubica.ec/geoserver/bicicuenca/wms?&CQL_FILTER=layer%3D%27RECREACION%27",
+              "url": "http://geoserver.bici.ubica.ec:9998/geoserver/bicicuenca/wms?&CQL_FILTER=layer%3D%27RECREACION%27",
               "layers": "equipamientos_urbanos"
             },
             {
               "type": "wms",
               "name": "Salud - Equipamientos urbanos",
-              "url": "https://geoserver.bici.ubica.ec/geoserver/bicicuenca/wms?&CQL_FILTER=layer%3D%27SALUD%27",
+              "url": "http://geoserver.bici.ubica.ec:9998/geoserver/bicicuenca/wms?&CQL_FILTER=layer%3D%27SALUD%27",
               "layers": "equipamientos_urbanos"
             }
           ]

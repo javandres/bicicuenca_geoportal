@@ -23,6 +23,9 @@
     "codigopostal.gob.ec:443",
     "186.42.174.236:8080",
     "geoportal.inclusion.gob.ec:443",
-    "201.159.223.152"
+    "201.159.223.152",
+    "geoserver.bici.ubica.ec:443",
+    "geoserver.bici.ubica.ec",
+    "geoserver.bici.ubica.ec:9998"
   ]
 }

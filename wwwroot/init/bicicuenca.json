@@ -9,12 +9,13 @@
     {
       "type": "group",
       "name": "Proyecto",
+      "isOpen": true,
       "members": [
         {
-          "name": "Estaciones - Temporal (CSV)",
+          "name": "Estaciones - Temporal",
           "description": "",
           "type": "csv",
-          "url": "http://localhost:8999/geoserver/bicicuenca/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=bicicuenca%3Abicicuenca_data_geom_hour&maxFeatures=50000000&outputFormat=csv",
+          "url": "https://geoserver.bici.ubica.ec/geoserver/bicicuenca/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=bicicuenca%3Abicicuenca_data_geom_hour&maxFeatures=50000000&outputFormat=csv",
           "defaultStyle": {
             "time": {
               "timeColumn": "timestamp",
@@ -31,18 +32,399 @@
             {
               "name": "geojson",
               "type": "hidden"
+            },
+            {
+              "name": "geom",
+              "type": "hidden"
+            },
+            {
+              "name": "ref",
+              "type": "hidden"
             }
           ]
         },
         {
-          "type": "wms-group",
-          "name": "Estaciones",
-          "url": "http://localhost:8999/geoserver/ows?service=WFS&acceptversions=2.0.0&request=GetCapabilities",
-          "description": "",
-          "dataCustodian": ""
+          "type": "wms",
+          "name": "Ciclovías",
+          "url": "https://geoserver.bici.ubica.ec/geoserver/bicicuenca/wms?",
+          "layers": "ciclovias",
+          "styles": "ciclovias"
+        },
+        {
+          "type": "wms",
+          "name": "Talleres de bicicletas",
+          "url": "https://geoserver.bici.ubica.ec/geoserver/bicicuenca/wms?",
+          "layers": "bici_talleres"
+        },
+        {
+          "type": "wms",
+          "name": "Parqueos de bicicletas",
+          "url": "https://geoserver.bici.ubica.ec/geoserver/bicicuenca/wms?",
+          "layers": "bici_parqueos"
+        },
+        {
+          "type": "group",
+          "name": "Accesibilidad (Isocronas por estación)",
+          "members": [
+            {
+              "type": "geojson",
+              "name": "1. Terminal Terrestre GeoJSON",
+              "url": "http://geoserver.bici.ubica.ec:9998/geoserver/bicicuenca/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=bicicuenca%3Aisocronas_bp_oportunidades&maxFeatures=50&outputFormat=application%2Fjson&CQL_FILTER=estacion%3D1",
+              "show": true,
+              "isOpenInWorkbench": true,
+              "opacity": 0.65,
+              "defaultStyle": {
+                "color": {
+                  "mapType": "enum",
+                  "colorPalette": "GnBu"
+                }
+              },
+              "activeStyle": "oport_poblacion"
+            },
+            {
+              "type": "geojson",
+              "name": "2. Parque del Paraíso",
+              "url": "http://geoserver.bici.ubica.ec:9998/geoserver/bicicuenca/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=bicicuenca%3Aisocronas_bp_oportunidades&maxFeatures=50&outputFormat=application%2Fjson&CQL_FILTER=estacion%3D2",
+              "show": true,
+              "isOpenInWorkbench": true,
+              "opacity": 0.65,
+              "defaultStyle": {
+                "color": {
+                  "mapType": "enum",
+                  "colorPalette": "GnBu"
+                }
+              },
+              "activeStyle": "oport_poblacion"
+            },
+            {
+              "type": "geojson",
+              "name": "3. Nueve de Octubre",
+              "url": "http://geoserver.bici.ubica.ec:9998/geoserver/bicicuenca/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=bicicuenca%3Aisocronas_bp_oportunidades&maxFeatures=50&outputFormat=application%2Fjson&CQL_FILTER=estacion%3D3",
+              "show": true,
+              "isOpenInWorkbench": true,
+              "opacity": 0.65,
+              "defaultStyle": {
+                "color": {
+                  "mapType": "enum",
+                  "colorPalette": "GnBu"
+                }
+              },
+              "activeStyle": "oport_poblacion"
+            },
+            {
+              "type": "geojson",
+              "name": "4. María Auxiliadora",
+              "url": "http://geoserver.bici.ubica.ec:9998/geoserver/bicicuenca/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=bicicuenca%3Aisocronas_bp_oportunidades&maxFeatures=50&outputFormat=application%2Fjson&CQL_FILTER=estacion%3D4",
+              "show": true,
+              "isOpenInWorkbench": true,
+              "opacity": 0.65,
+              "defaultStyle": {
+                "color": {
+                  "mapType": "enum",
+                  "colorPalette": "GnBu"
+                }
+              },
+              "activeStyle": "oport_poblacion"
+            },
+            {
+              "type": "geojson",
+              "name": "5. Santo Domingo",
+              "url": "http://geoserver.bici.ubica.ec:9998/geoserver/bicicuenca/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=bicicuenca%3Aisocronas_bp_oportunidades&maxFeatures=50&outputFormat=application%2Fjson&CQL_FILTER=estacion%3D5",
+              "show": true,
+              "isOpenInWorkbench": true,
+              "opacity": 0.65,
+              "defaultStyle": {
+                "color": {
+                  "mapType": "enum",
+                  "colorPalette": "GnBu"
+                }
+              },
+              "activeStyle": "oport_poblacion"
+            },
+            {
+              "type": "geojson",
+              "name": "6. San Sebastián",
+              "url": "http://geoserver.bici.ubica.ec:9998/geoserver/bicicuenca/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=bicicuenca%3Aisocronas_bp_oportunidades&maxFeatures=50&outputFormat=application%2Fjson&CQL_FILTER=estacion%3D6",
+              "show": true,
+              "isOpenInWorkbench": true,
+              "opacity": 0.65,
+              "defaultStyle": {
+                "color": {
+                  "mapType": "enum",
+                  "colorPalette": "GnBu"
+                }
+              },
+              "activeStyle": "oport_poblacion"
+            },
+            {
+              "type": "geojson",
+              "name": "7. Parque Calderón",
+              "url": "http://geoserver.bici.ubica.ec:9998/geoserver/bicicuenca/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=bicicuenca%3Aisocronas_bp_oportunidades&maxFeatures=50&outputFormat=application%2Fjson&CQL_FILTER=estacion%3D7",
+              "show": true,
+              "isOpenInWorkbench": true,
+              "opacity": 0.65,
+              "defaultStyle": {
+                "color": {
+                  "mapType": "enum",
+                  "colorPalette": "GnBu"
+                }
+              },
+              "activeStyle": "oport_poblacion"
+            },
+            {
+              "type": "geojson",
+              "name": "8. La Merced",
+              "url": "http://geoserver.bici.ubica.ec:9998/geoserver/bicicuenca/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=bicicuenca%3Aisocronas_bp_oportunidades&maxFeatures=50&outputFormat=application%2Fjson&CQL_FILTER=estacion%3D8",
+              "show": true,
+              "isOpenInWorkbench": true,
+              "opacity": 0.65,
+              "defaultStyle": {
+                "color": {
+                  "mapType": "enum",
+                  "colorPalette": "GnBu"
+                }
+              },
+              "activeStyle": "oport_poblacion"
+            },
+            {
+              "type": "geojson",
+              "name": "9. Victor J. Cuesta",
+              "url": "http://geoserver.bici.ubica.ec:9998/geoserver/bicicuenca/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=bicicuenca%3Aisocronas_bp_oportunidades&maxFeatures=50&outputFormat=application%2Fjson&CQL_FILTER=estacion%3D9",
+              "show": true,
+              "isOpenInWorkbench": true,
+              "opacity": 0.65,
+              "defaultStyle": {
+                "color": {
+                  "mapType": "enum",
+                  "colorPalette": "GnBu"
+                }
+              },
+              "activeStyle": "oport_poblacion"
+            },
+            {
+              "type": "geojson",
+              "name": "10. Portal Artesanal",
+              "url": "http://geoserver.bici.ubica.ec:9998/geoserver/bicicuenca/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=bicicuenca%3Aisocronas_bp_oportunidades&maxFeatures=50&outputFormat=application%2Fjson&CQL_FILTER=estacion%3D10",
+              "show": true,
+              "isOpenInWorkbench": true,
+              "opacity": 0.65,
+              "defaultStyle": {
+                "color": {
+                  "mapType": "enum",
+                  "colorPalette": "GnBu"
+                }
+              },
+              "activeStyle": "oport_poblacion"
+            },
+            {
+              "type": "geojson",
+              "name": "11. El Vergel",
+              "url": "http://geoserver.bici.ubica.ec:9998/geoserver/bicicuenca/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=bicicuenca%3Aisocronas_bp_oportunidades&maxFeatures=50&outputFormat=application%2Fjson&CQL_FILTER=estacion%3D11",
+              "show": true,
+              "isOpenInWorkbench": true,
+              "opacity": 0.65,
+              "defaultStyle": {
+                "color": {
+                  "mapType": "enum",
+                  "colorPalette": "GnBu"
+                }
+              },
+              "activeStyle": "oport_poblacion"
+            },
+            {
+              "type": "geojson",
+              "name": "12. Parque de la Madre",
+              "url": "http://geoserver.bici.ubica.ec:9998/geoserver/bicicuenca/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=bicicuenca%3Aisocronas_bp_oportunidades&maxFeatures=50&outputFormat=application%2Fjson&CQL_FILTER=estacion%3D12",
+              "show": true,
+              "isOpenInWorkbench": true,
+              "opacity": 0.65,
+              "defaultStyle": {
+                "color": {
+                  "mapType": "enum",
+                  "colorPalette": "GnBu"
+                }
+              },
+              "activeStyle": "oport_poblacion"
+            },
+            {
+              "type": "geojson",
+              "name": "13. El Centenario",
+              "url": "http://geoserver.bici.ubica.ec:9998/geoserver/bicicuenca/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=bicicuenca%3Aisocronas_bp_oportunidades&maxFeatures=50&outputFormat=application%2Fjson&CQL_FILTER=estacion%3D13",
+              "show": true,
+              "isOpenInWorkbench": true,
+              "opacity": 0.65,
+              "defaultStyle": {
+                "color": {
+                  "mapType": "enum",
+                  "colorPalette": "GnBu"
+                }
+              },
+              "activeStyle": "oport_poblacion"
+            },
+            {
+              "type": "geojson",
+              "name": "14. El farol",
+              "url": "http://geoserver.bici.ubica.ec:9998/geoserver/bicicuenca/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=bicicuenca%3Aisocronas_bp_oportunidades&maxFeatures=50&outputFormat=application%2Fjson&CQL_FILTER=estacion%3D14",
+              "show": true,
+              "isOpenInWorkbench": true,
+              "opacity": 0.65,
+              "defaultStyle": {
+                "color": {
+                  "mapType": "enum",
+                  "colorPalette": "GnBu"
+                }
+              },
+              "activeStyle": "oport_poblacion"
+            },
+            {
+              "type": "geojson",
+              "name": "15. Universidad de Cuenca",
+              "url": "http://geoserver.bici.ubica.ec:9998/geoserver/bicicuenca/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=bicicuenca%3Aisocronas_bp_oportunidades&maxFeatures=50&outputFormat=application%2Fjson&CQL_FILTER=estacion%3D15",
+              "show": true,
+              "isOpenInWorkbench": true,
+              "opacity": 0.65,
+              "defaultStyle": {
+                "color": {
+                  "mapType": "enum",
+                  "colorPalette": "GnBu"
+                }
+              },
+              "activeStyle": "oport_poblacion"
+            },
+            {
+              "type": "geojson",
+              "name": "16. Escuela Panamá",
+              "url": "http://geoserver.bici.ubica.ec:9998/geoserver/bicicuenca/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=bicicuenca%3Aisocronas_bp_oportunidades&maxFeatures=50&outputFormat=application%2Fjson&CQL_FILTER=estacion%3D16",
+              "show": true,
+              "isOpenInWorkbench": true,
+              "opacity": 0.65,
+              "defaultStyle": {
+                "color": {
+                  "mapType": "enum",
+                  "colorPalette": "GnBu"
+                }
+              },
+              "activeStyle": "oport_poblacion"
+            },
+            {
+              "type": "geojson",
+              "name": "17. La Concordia",
+              "url": "http://geoserver.bici.ubica.ec:9998/geoserver/bicicuenca/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=bicicuenca%3Aisocronas_bp_oportunidades&maxFeatures=50&outputFormat=application%2Fjson&CQL_FILTER=estacion%3D17",
+              "show": true,
+              "isOpenInWorkbench": true,
+              "opacity": 0.65,
+              "defaultStyle": {
+                "color": {
+                  "mapType": "enum",
+                  "colorPalette": "GnBu"
+                }
+              },
+              "activeStyle": "oport_poblacion"
+            },
+            {
+              "type": "geojson",
+              "name": "18. El Estado",
+              "url": "http://geoserver.bici.ubica.ec:9998/geoserver/bicicuenca/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=bicicuenca%3Aisocronas_bp_oportunidades&maxFeatures=50&outputFormat=application%2Fjson&CQL_FILTER=estacion%3D18",
+              "show": true,
+              "isOpenInWorkbench": true,
+              "opacity": 0.65,
+              "defaultStyle": {
+                "color": {
+                  "mapType": "enum",
+                  "colorPalette": "GnBu"
+                }
+              },
+              "activeStyle": "oport_poblacion"
+            },
+            {
+              "type": "geojson",
+              "name": "19. UE La Salle",
+              "url": "http://geoserver.bici.ubica.ec:9998/geoserver/bicicuenca/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=bicicuenca%3Aisocronas_bp_oportunidades&maxFeatures=50&outputFormat=application%2Fjson&CQL_FILTER=estacion%3D19",
+              "show": true,
+              "isOpenInWorkbench": true,
+              "opacity": 0.65,
+              "defaultStyle": {
+                "color": {
+                  "mapType": "enum",
+                  "colorPalette": "GnBu"
+                }
+              },
+              "activeStyle": "oport_poblacion"
+            },
+            {
+              "type": "geojson",
+              "name": "20. Universidad del Azuay",
+              "url": "http://geoserver.bici.ubica.ec:9998/geoserver/bicicuenca/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=bicicuenca%3Aisocronas_bp_oportunidades&maxFeatures=50&outputFormat=application%2Fjson&CQL_FILTER=estacion%3D20",
+              "show": true,
+              "isOpenInWorkbench": true,
+              "opacity": 0.65,
+              "defaultStyle": {
+                "color": {
+                  "mapType": "enum",
+                  "colorPalette": "GnBu"
+                }
+              },
+              "activeStyle": "oport_poblacion"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "Equipamientos Urbanos",
+          "members": [
+            {
+              "type": "wms",
+              "name": "Equipamientos urbanos (todos)",
+              "url": "https://geoserver.bici.ubica.ec/geoserver/bicicuenca/wms?",
+              "layers": "equipamientos_urbanos"
+            },
+            {
+              "type": "wms",
+              "name": "Administración - Equipamientos urbanos",
+              "url": "https://geoserver.bici.ubica.ec/geoserver/bicicuenca/wms?&CQL_FILTER=layer%3D%27administracion%27",
+              "layers": "equipamientos_urbanos"
+            },
+            {
+              "type": "wms",
+              "name": "Aprovisionamiento - Equipamientos urbanos",
+              "url": "https://geoserver.bici.ubica.ec/geoserver/bicicuenca/wms?&CQL_FILTER=layer%3D%27APROVISIONAMIENTO%27",
+              "layers": "equipamientos_urbanos"
+            },
+            {
+              "type": "wms",
+              "name": "Bienestar Soacial - Equipamientos urbanos",
+              "url": "https://geoserver.bici.ubica.ec/geoserver/bicicuenca/wms?&CQL_FILTER=layer%3D%27BINESTARSOCIAL%27",
+              "layers": "equipamientos_urbanos"
+            },
+            {
+              "type": "wms",
+              "name": "Cultura - Equipamientos urbanos",
+              "url": "https://geoserver.bici.ubica.ec/geoserver/bicicuenca/wms?&CQL_FILTER=layer%3D%27CULTURA%27",
+              "layers": "equipamientos_urbanos"
+            },
+            {
+              "type": "wms",
+              "name": "Educación - Equipamientos urbanos",
+              "url": "https://geoserver.bici.ubica.ec/geoserver/bicicuenca/wms?&CQL_FILTER=layer%3D%27EDUCACION%27",
+              "layers": "equipamientos_urbanos"
+            },
+            {
+              "type": "wms",
+              "name": "Recreación - Equipamientos urbanos",
+              "url": "https://geoserver.bici.ubica.ec/geoserver/bicicuenca/wms?&CQL_FILTER=layer%3D%27RECREACION%27",
+              "layers": "equipamientos_urbanos"
+            },
+            {
+              "type": "wms",
+              "name": "Salud - Equipamientos urbanos",
+              "url": "https://geoserver.bici.ubica.ec/geoserver/bicicuenca/wms?&CQL_FILTER=layer%3D%27SALUD%27",
+              "layers": "equipamientos_urbanos"
+            }
+          ]
         }
       ]
     },
+
     {
       "type": "wms-group",
       "name": "GAD Cuenca",

@@ -63,12 +63,18 @@
           "layers": "bici_parqueos"
         },
         {
+          "type": "wms",
+          "name": "Rutas turístivas (puntos)",
+          "url": "http://geoserver.bici.ubica.ec:9998/geoserver/bicicuenca/wms?",
+          "layers": "puntos_rutas_turisticas"
+        },
+        {
           "type": "group",
           "name": "Accesibilidad (Isocronas por estación)",
           "members": [
             {
               "type": "geojson",
-              "name": "1. Terminal Terrestre GeoJSON",
+              "name": "1. Terminal Terrestre",
               "url": "http://geoserver.bici.ubica.ec:9998/geoserver/bicicuenca/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=bicicuenca%3Aisocronas_bp_oportunidades&maxFeatures=50&outputFormat=application%2Fjson&CQL_FILTER=estacion%3D1",
               "show": true,
               "isOpenInWorkbench": true,
